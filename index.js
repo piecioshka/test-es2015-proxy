@@ -8,7 +8,7 @@ myObject = new Proxy(myObject, {
     // Overwrite default getter.
     get: function (o, name) {
         // Check if target object contains passed property
-        if (!o[name]) {
+        if (!Object.prototype.hasOwnProperty.call(o, name)) {
             // If not, the error will be thrown
             throw new ReferenceError(`Object property '${name}' is not defined (try define using null value)`);
         }
