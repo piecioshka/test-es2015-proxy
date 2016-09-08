@@ -19,7 +19,7 @@ myObject = new Proxy(myObject, {
 });
 
 // Print existed property (finished successfully).
-console.log(myObject.foo);
+console.log(myObject.foo); // "foo"
 
 // Try to print not existed property.
 // Once the Proxy is not used, the `undefined` value will be printed.
