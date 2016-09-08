@@ -1,6 +1,6 @@
 'use strict';
 
-// Any object which don't have property that we will try to access.
+// Any object which doesn't have property that we will try to access.
 var myObject = { foo: 'foo' };
 
 // Overwrite default action, which gets objects property.
@@ -18,10 +18,10 @@ myObject = new Proxy(myObject, {
     }
 });
 
-// Print existed property (finished successfully).
+// Print existing property (finished successfully).
 console.log(myObject.foo); // "foo"
 
-// Try to print not existed property.
+// Try to print non-existing property.
 // Once the Proxy is not used, the `undefined` value will be printed.
 // After overwrite the default behaviour of getting property values, the ReferenceError will be thrown.
 console.log(myObject.bar);
