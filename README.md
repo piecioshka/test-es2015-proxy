@@ -5,19 +5,19 @@
 ---
 
 Yesterday (2016-09-07) during beer [@RafaelSzefler](https://github.com/RafaelSzefler) said that JavaScript is bad,
-because when you try get access to not existed property you get `undefined` value,
-instead of any exception or error.
+because when you try to access non-existing property you get `undefined` value,
+instead of an exception or error.
 
-I am agree with that. But...
+I agree with that. But...
 
-In ECMAScript 2015 we have a `Proxy` object, which can give the opportunity to override the default "getter" of property.
+In ECMAScript 2015 we have a `Proxy` object, which gives the opportunity to override the default "getter" of property.
 
 I wrote some code. Please take a look at:
 
 ```javascript
 'use strict';
 
-// Any object which don't have property that we will try to access.
+// Any object which doesn't have property that we will try to access.
 var myObject = { foo: 'foo' };
 
 // Overwrite default action, which gets objects property.
@@ -35,10 +35,10 @@ myObject = new Proxy(myObject, {
     }
 });
 
-// Print existed property (finished successfully).
+// Print existing property (finished successfully).
 console.log(myObject.foo); // "foo"
 
-// Try to print not existed property.
+// Try to print non-existing property.
 // Once the Proxy is not used, the `undefined` value will be printed.
 // After overwrite the default behaviour of getting property values, the ReferenceError will be thrown.
 console.log(myObject.bar);
@@ -67,7 +67,7 @@ ReferenceError: Object property 'bar' is not defined (try to define the new one 
 
 ## How to test on my computer?
 
-1. Open in browser `index.html` file.
+1. Either open in browser `index.html` file,
 2. Or run command:
 
 ```bash
