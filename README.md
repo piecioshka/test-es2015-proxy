@@ -4,15 +4,14 @@
 
 ---
 
-Yesterday (2016-09-07) during beer @RafaelSzefler said that JavaScript is bad,
+Yesterday (2016-09-07) during beer [@RafaelSzefler](https://github.com/RafaelSzefler) said that JavaScript is bad,
 because when you try get access to not existed property you get `undefined` value,
 instead of any exception or error.
 
-I am agree with that.
-
-But...
+I am agree with that. But...
 
 In ECMAScript 2015 we have `Proxy` object which can give opportunity to override default "getter" of property.
+
 I was wrote some code.
 
 Please look at:
@@ -68,20 +67,20 @@ ReferenceError: Object property 'bar' is not defined (try define using null valu
     at startup (bootstrap_node.js:149:9)
 ```
 
-## Hot to run code?
+## How to text on my computer?
 
-Or open in browser `index.html` file.
- 
-Or run command:
+1. Or open in browser `index.html` file.
+2. Or run command:
 
 ```bash
 node index.js
 ```
 
+## Thanks 
+
+* [@RafaelSzefler](https://github.com/RafaelSzefler) for your opinion.
+* [@rgierczak](https://github.com/rgierczak) for your help in PL to EN translation.
+
 ----
 
-Thanks @RafaelSzefler for your opinion.
-
-Thanks @rgierczak for your help in PL to EN translation.
-
-@ 2016
+**@ 2016**
