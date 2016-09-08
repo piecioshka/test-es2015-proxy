@@ -10,7 +10,7 @@ myObject = new Proxy(myObject, {
         // Check if target object contains passed property
         if (!Object.prototype.hasOwnProperty.call(o, name)) {
             // If not, the error will be thrown
-            throw new ReferenceError(`Object property '${name}' is not defined (try define using null value)`);
+            throw new ReferenceError(`Object property '${name}' is not defined (try to define the new one using null value)`);
         }
 
         // In default mode, we return existing property.

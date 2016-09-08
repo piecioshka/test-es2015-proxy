@@ -12,7 +12,7 @@ I am agree with that. But...
 
 In ECMAScript 2015 we have `Proxy` object which can give opportunity to override default "getter" of property.
 
-I was wrote some code. Please look at:
+I wrote some code. Please take a look at:
 
 ```javascript
 'use strict';
@@ -27,7 +27,7 @@ myObject = new Proxy(myObject, {
         // Check if target object contains passed property
         if (!Object.prototype.hasOwnProperty.call(o, name)) {
             // If not, the error will be thrown
-            throw new ReferenceError(`Object property '${name}' is not defined (try define using null value)`);
+            throw new ReferenceError(`Object property '${name}' is not defined (try to define the new one using null value)`);
         }
 
         // In default mode, we return existing property.
@@ -49,10 +49,10 @@ Results:
 ```
 foo
 /Users/piecioshka/projects/test-es2015-proxy/index.js:12
-            throw new ReferenceError(`Object property '${name}' is not defined (try define using null value)`);
+            throw new ReferenceError(`Object property '${name}' is not defined (try to define the new one using null value)`);
             ^
 
-ReferenceError: Object property 'bar' is not defined (try define using null value)
+ReferenceError: Object property 'bar' is not defined (try to define the new one using null value)
     at Object.get (/Users/piecioshka/projects/test-es2015-proxy/index.js:12:19)
     at Object.<anonymous> (/Users/piecioshka/projects/test-es2015-proxy/index.js:27:21)
     at Module._compile (module.js:556:32)
