@@ -10,7 +10,7 @@ instead of any exception or error.
 
 I am agree with that. But...
 
-In ECMAScript 2015 we have `Proxy` object which can give opportunity to override default "getter" of property.
+In ECMAScript 2015 we have a `Proxy` object, which can give the opportunity to override the default "getter" of property.
 
 I wrote some code. Please take a look at:
 
@@ -67,7 +67,7 @@ ReferenceError: Object property 'bar' is not defined (try to define the new one 
 
 ## How to test on my computer?
 
-1. Or open in browser `index.html` file.
+1. Open in browser `index.html` file.
 2. Or run command:
 
 ```bash
