@@ -12,9 +12,7 @@ I am agree with that. But...
 
 In ECMAScript 2015 we have `Proxy` object which can give opportunity to override default "getter" of property.
 
-I was wrote some code.
-
-Please look at:
+I was wrote some code. Please look at:
 
 ```javascript
 'use strict';
@@ -67,7 +65,7 @@ ReferenceError: Object property 'bar' is not defined (try define using null valu
     at startup (bootstrap_node.js:149:9)
 ```
 
-## How to text on my computer?
+## How to test on my computer?
 
 1. Or open in browser `index.html` file.
 2. Or run command:
@@ -78,9 +76,9 @@ node index.js
 
 ## Thanks 
 
-* [@RafaelSzefler](https://github.com/RafaelSzefler) for your opinion.
+* [@RafaelSzefler](https://github.com/RafaelSzefler) for your opinion about JavaScript.
 * [@rgierczak](https://github.com/rgierczak) for your help in PL to EN translation.
 
 ----
 
-**@ 2016**
+@ 2016
