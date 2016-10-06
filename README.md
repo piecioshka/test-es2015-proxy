@@ -67,12 +67,12 @@ ReferenceError: Object property 'bar' is not defined (try to define the new one 
 
 ## How to test on my computer?
 
-1. Either open in browser `index.html` file,
-2. Or run command:
+* Either open in browser `index.html` file
+* Or run command:
 
-```bash
-node index.js
-```
+    ```bash
+    $ node index.js
+    ```
 
 ## Thanks 
 
