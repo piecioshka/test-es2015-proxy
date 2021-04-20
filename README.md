@@ -1,10 +1,10 @@
 # test-es2015-proxy
 
-> :ledger: Testing ES2015 Proxy
+:ledger: Testing ES2015 Proxy
 
----
+## Story time
 
-Yesterday (2016-09-07) during beer [@RafaelSzefler](https://github.com/RafaelSzefler) said that JavaScript is bad,
+Yesterday (2016-09-07) during beer with [@RafalSzefler](https://github.com/RafalSzefler), he said that JavaScript is bad,
 because when you try to access non-existing property you get `undefined` value,
 instead of an exception or error.
 
@@ -76,7 +76,7 @@ ReferenceError: Object property 'bar' is not defined (try to define the new one 
 
 ## Thanks 
 
-* [@RafaelSzefler](https://github.com/RafaelSzefler) for your opinion about JavaScript.
+* [@RafalSzefler](https://github.com/RafalSzefler) for your opinion about JavaScript.
 * [@rgierczak](https://github.com/rgierczak) for your help in PL to EN translation.
 
 ----
