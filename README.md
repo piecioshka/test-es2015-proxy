@@ -82,3 +82,7 @@ ReferenceError: Object property 'bar' is not defined (try to define the new one 
 ----
 
 @ 2016
+
+## License
+
+[The MIT License](http://piecioshka.mit-license.org) @ 2026
