@@ -65,6 +65,31 @@ ReferenceError: Object property 'bar' is not defined (try to define the new one 
     at startup (bootstrap_node.js:149:9)
 ```
 
+## Limitations
+
+This repository is an **experiment**, not a recommended pattern. As pointed out by
+[@ffigiel](https://github.com/ffigiel) in [#3](https://github.com/piecioshka/test-es2015-proxy/issues/3),
+guarding property access with a `Proxy` increases complexity without really solving the
+underlying problem:
+
+- **It relies on discipline.** Every object has to be wrapped before use. Forget a single
+  one and that part of the app silently falls back to the `undefined` behavior you tried to
+  avoid. Wrapping each object before you can use it also hurts readability and
+  maintainability.
+- **You lose track of what is safe.** With some objects proxied and some plain, it stops
+  being obvious which is which, so you lose confidence in the code.
+- **It only fails at runtime.** The error shows up when the code runs, not while you write
+  it, and only on the exact path that was executed.
+- **It adds overhead.** The trap runs on every property read.
+
+A better way to catch missing properties is **static typing**. Tools like
+[TypeScript](https://www.typescriptlang.org/) or [Flow](https://flow.org/) describe the
+expected shape of an object and report missing or misspelled properties at compile time,
+with zero runtime cost and no need to wrap anything. Extensive integration tests can cover
+some of this too, but they are far more expensive than static types for the same guarantee.
+
+So treat this as a demonstration of what `Proxy` _can_ do, not as advice to ship it.
+
 ## How to test on my computer?
 
 * Either open in browser `index.html` file
